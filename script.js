@@ -27,7 +27,7 @@ function getPositionThroughBrowser(position) {
 }
 
 async function getPositionThroughCity(city) {
-    const res = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=e38e793b0540890a262fbffc0d9c534a`)
+    const res = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=e38e793b0540890a262fbffc0d9c534a`)
     const position = await res.json();
     let latitude = position[0].lat;
     let longtitude = position[0].lon;
